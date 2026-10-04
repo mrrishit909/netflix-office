@@ -74,6 +74,8 @@ def netflix():
           ("movies_2010s_median_min", mv[mv["decade"] == 2010]["mins"].median()), ("movies_1980s_median_min", mv[mv["decade"] == 1980]["mins"].median()),
           ("median_gap_all", ok["gap"].median()), ("titles_with_gap", len(ok))]
     put("netflix_summary", sm, ["key", "value"])
+    b = (s90["mins"] // 10 * 10).astype(int).value_counts()
+    put("netflix_hist90", [(lo, int(b.get(lo, 0))) for lo in range(int(b.index.min()), int(b.index.max()) + 10, 10)], ["bin_lo", "movies"])
     c = d.dropna(subset=["country"]).copy(); c["c"] = c["country"].str.split(",")
     c = c.explode("c"); c["c"] = c["c"].str.strip(); c = c[c["c"] != ""]
     top = list(c.groupby("c")["show_id"].nunique().sort_values(ascending=False, kind="stable").index[:6])

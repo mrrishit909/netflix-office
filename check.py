@@ -96,6 +96,9 @@ def netflix():
                  ("share_released_2015_plus", sum(r["ry"] >= 2015 for r in rows) / n), ("share_released_before_2000", sum(r["ry"] < 2000 for r in rows) / n), ("movies_2010s_median_min", median(dec[2010])),
                  ("movies_1980s_median_min", median(dec[1980])), ("median_gap_all", median([r["gap"] for r in ok])), ("titles_with_gap", len(ok))):
         same(f"netflix_summary {k}", v, s[k])
+    hb = Counter(r["mins"] // 10 * 10 for r in s90); th = table("netflix_hist90")
+    assert [int(x["bin_lo"]) for x in th] == list(range(min(hb), max(hb) + 10, 10)), "histogram bins differ"
+    for x in th: same(f"netflix_hist90 {x['bin_lo']}", hb.get(int(x["bin_lo"]), 0), x["movies"])
     lists = lambda col, r: sorted({x.strip() for x in r[col].split(",") if x.strip()})
     cc = Counter(c for r in rows for c in lists("country", r)); topc = [c for c, _ in sorted(cc.items(), key=lambda kv_: (-kv_[1], kv_[0]))[:6]]
     tc = table("netflix_country"); assert [x["country"] for x in tc[:6]] == topc, "top countries differ"
