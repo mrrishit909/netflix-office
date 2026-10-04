@@ -1,0 +1,50 @@
+{
+  "pulled": "2026-10-04",
+  "files": {
+    "netflix_titles.csv": {
+      "url": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-04-20/netflix_titles.csv",
+      "bytes": 3000491,
+      "sha256": "7a3aaf076348237cef99e678025d2fed84b9212fddde5c09370e2a10cb9fc143"
+    },
+    "office_ratings.csv": {
+      "url": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-17/office_ratings.csv",
+      "bytes": 7191,
+      "sha256": "c60640acce8e84d28cbd86ee8f5542032f57195e79198671dc4cf8861ff5ffe4"
+    },
+    "title.basics.tsv.gz": {
+      "url": "https://datasets.imdbws.com/title.basics.tsv.gz",
+      "bytes": 228002230,
+      "sha256": "8a7415fd9dab0496a663d058247238c24e2899e8e43c2f7fcc53e5091b015eeb"
+    },
+    "title.episode.tsv.gz": {
+      "url": "https://datasets.imdbws.com/title.episode.tsv.gz",
+      "bytes": 54871517,
+      "sha256": "92ea874d80f111448b28fb075caa8e26d796f79deb0eb469b529a326dccffb4d"
+    },
+    "title.ratings.tsv.gz": {
+      "url": "https://datasets.imdbws.com/title.ratings.tsv.gz",
+      "bytes": 8671065,
+      "sha256": "275c1b0ff353d21e372abe0224b9fcf741a841401017741ecea48a0e04f10beb"
+    },
+    "tvmaze_episodes.json": {
+      "url": "https://api.tvmaze.com/shows/526/episodes?specials=1",
+      "bytes": 151830,
+      "sha256": "b7e4427c3c5663a709ef7420d68a1aaaca1f1f91617ff056e14aff1d1abd8cb6"
+    },
+    "tvmaze_cast.json": {
+      "url": "https://api.tvmaze.com/shows/526/cast",
+      "bytes": 22002,
+      "sha256": "fc9d04fa62c7add6d77dd0894bc7d5a91e33f11da1deca8e395a87c6be0f4b11"
+    },
+    "tvmaze_guestcast.json": {
+      "url": "https://api.tvmaze.com/episodes/{id}/guestcast (one call per episode id in tvmaze_episodes.json)",
+      "bytes": 927618,
+      "sha256": "3a6de8107976db49b0c4e02a7e66c88138b398294b879b6eda5a7a15167dd7ff"
+    },
+    "wikipedia_names.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&prop=description|pageprops&titles=<50 names>&redirects=1",
+      "bytes": 53901,
+      "sha256": "aa28a663d40bd5ec0a103e2a97ccebb6b14ee609ad014fa36a9c22a0e2bc6e5b"
+    }
+  }
+}
