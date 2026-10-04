@@ -1,0 +1,12 @@
+key,value
+finale_rank_by_rating,1
+finale_tied_at_that_rank,2
+finale_minus_season_mean,2.12173913
+season9_mean_without_finale,7.581818182
+finale_votes_vs_median_episode_votes,4.003193033
+mean_seasons_2_to_5,8.354117647
+mean_seasons_8_to_9,7.529787234
+best_season,3
+worst_season,8
+episodes_below_season_2_to_5_mean_in_8_9,44
+episodes_8_9,47
